@@ -1,0 +1,181 @@
+[
+    {
+        "source": {
+            "type": "location",
+            "globalId": "EF7BE5A5EE23A51D339A43CDC1D62982EB61CC3F",
+            "hostName": "merchant.us.qless.com",
+            "hostId": 27,
+            "indirectId": "a2ca70d4-bdbb-43c8-9702-d4cdfc94e9fa"
+        },
+        "name": "Mission",
+        "description": "Johnson County Motor Vehicle Mission Office",
+        "merchantInfo": {
+            "source": {
+                "type": "merchant",
+                "globalId": "906FD6A0EA54A7590CA7025C568A8E77A8318297",
+                "hostName": "merchant.us.qless.com",
+                "hostId": 24,
+                "indirectId": "78dce0bd-2c73-42a0-ada9-c3aeee99b3c1"
+            },
+            "name": "Johnson County"
+        },
+        "contactInfo": {
+            "timeZone": "America/Chicago",
+            "address": {
+                "addressLines": [
+                    "6000 Lamar Ave."
+                ],
+                "city": "Mission",
+                "state": "KS",
+                "postalCode": "66202",
+                "isoCountryCode": "US"
+            },
+            "phone": {
+                "countryCode": 1,
+                "digits": 9138261800
+            },
+            "fax": {
+                "countryCode": 1,
+                "digits": 9137152510
+            },
+            "gps": {
+                "longitude": -94.658367,
+                "latitude": 39.019953
+            }
+        },
+        "consumerFeatures": {
+            "hasAppointments": false,
+            "hasCustomScreens": false,
+            "hasSMSSummoning": true,
+            "hasVoiceQueuing": true,
+            "hasTransactionTypes": false,
+            "hasMobileAccess": true,
+            "maxSimultaneousQueues": 0,
+            "supportsPartySize": false,
+            "shouldDisplayTransactionTypesBeforeQueues": false,
+            "supportedLocales": [
+                "en_US",
+                "es_US"
+            ]
+        }
+    },
+    {
+        "source": {
+            "type": "location",
+            "globalId": "606A3D78F0341ADB789E60664A3EC5245525B073",
+            "hostName": "merchant.us.qless.com",
+            "hostId": 28,
+            "indirectId": "c404a0e3-71d4-46f9-8252-9ebfb0e98f03"
+        },
+        "name": "Olathe",
+        "description": "Johnson County Motor Vehicle Olathe Office",
+        "merchantInfo": {
+            "source": {
+                "type": "merchant",
+                "globalId": "906FD6A0EA54A7590CA7025C568A8E77A8318297",
+                "hostName": "merchant.us.qless.com",
+                "hostId": 24,
+                "indirectId": "78dce0bd-2c73-42a0-ada9-c3aeee99b3c1"
+            },
+            "name": "Johnson County"
+        },
+        "contactInfo": {
+            "timeZone": "America/Chicago",
+            "address": {
+                "addressLines": [
+                    "782 N. Ridgeview Rd."
+                ],
+                "city": "Olathe",
+                "state": "KS",
+                "postalCode": "66061",
+                "isoCountryCode": "US"
+            },
+            "phone": {
+                "countryCode": 1,
+                "digits": 9138261800
+            },
+            "fax": {
+                "countryCode": 1,
+                "digits": 9137152418
+            },
+            "gps": {
+                "longitude": -94.795238,
+                "latitude": 38.891563
+            }
+        },
+        "consumerFeatures": {
+            "hasAppointments": false,
+            "hasCustomScreens": false,
+            "hasSMSSummoning": true,
+            "hasVoiceQueuing": true,
+            "hasTransactionTypes": false,
+            "hasMobileAccess": true,
+            "maxSimultaneousQueues": 0,
+            "supportsPartySize": false,
+            "shouldDisplayTransactionTypesBeforeQueues": false,
+            "supportedLocales": [
+                "en_US",
+                "es_US"
+            ]
+        }
+    },
+    {
+        "source": {
+            "type": "location",
+            "globalId": "A7F2FDB5A9E506D2230431A163AE31438CA16B79",
+            "hostName": "merchant.us.qless.com",
+            "hostId": 171,
+            "indirectId": "7c11fc1b-147b-41e6-9999-4f115a3ff267"
+        },
+        "name": "Austin Animal Center",
+        "description": "Austin Animal Center",
+        "merchantInfo": {
+            "source": {
+                "type": "merchant",
+                "globalId": "AFAEF68E52232B0C2A0970F4C6F720A0C3C66BC4",
+                "hostName": "merchant.us.qless.com",
+                "hostId": 141,
+                "indirectId": "017aae8f-6453-4b45-a9c9-25f3e55c2696"
+            },
+            "name": "Austin Animal Center"
+        },
+        "contactInfo": {
+            "timeZone": "America/Chicago",
+            "address": {
+                "addressLines": [
+                    "7201 Levander Loop"
+                ],
+                "city": "Austin",
+                "state": "TX",
+                "postalCode": "78702",
+                "isoCountryCode": "US"
+            },
+            "phone": {
+                "countryCode": 1,
+                "digits": 5129726099
+            },
+            "fax": {
+                "countryCode": 1,
+                "digits": 5129726036
+            },
+            "gps": {
+                "longitude": -97.690279,
+                "latitude": 30.24722
+            }
+        },
+        "consumerFeatures": {
+            "hasAppointments": false,
+            "hasCustomScreens": true,
+            "hasSMSSummoning": true,
+            "hasVoiceQueuing": true,
+            "hasTransactionTypes": false,
+            "hasMobileAccess": true,
+            "maxSimultaneousQueues": 0,
+            "supportsPartySize": false,
+            "shouldDisplayTransactionTypesBeforeQueues": false,
+            "supportedLocales": [
+                "en_US"
+            ]
+        }
+    }
+]

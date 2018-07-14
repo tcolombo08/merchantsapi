@@ -1,0 +1,409 @@
+{
+	"variables": [],
+	"info": {
+		"name": "QLess",
+		"_postman_id": "4b821078-5af1-02eb-1ad7-cf608eb8e79f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "filter merchants text",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/merchant/location?searchText=olat",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "olat",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "filter merchants exclude all",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/merchant/location?searchText=Olat&omitMerchantInfo=true&omitConsumerFeatures=true&omitContactInfo=true",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "Olat",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "omitMerchantInfo",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "omitConsumerFeatures",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "omitContactInfo",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "filter merchants geolocation",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/merchant/location?longitude=-82.530947&latitude=27.254624&searchRadius=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "Olat",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitMerchantInfo",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitConsumerFeatures",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitContactInfo",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "longitude",
+							"value": "-82.530947",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "latitude",
+							"value": "27.254624",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "searchRadius",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "filter merchants gids",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/merchant/location?gids=EF7BE5A5EE23A51D339A43CDC1D62982EB61CC3F&gids=906FD6A0EA54A7590CA7025C568A8E77A8318297",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "Olat",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitMerchantInfo",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitConsumerFeatures",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitContactInfo",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "longitude",
+							"value": "-82.530947",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "27.254624",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "searchRadious",
+							"value": "500",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "gids",
+							"value": "EF7BE5A5EE23A51D339A43CDC1D62982EB61CC3F",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "gids",
+							"value": "906FD6A0EA54A7590CA7025C568A8E77A8318297",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "filter merchants mobile access",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/merchant/location?mobileClientAccess=false",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location"
+					],
+					"query": [
+						{
+							"key": "mobileClientAccess",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get merchant by GId",
+			"request": {
+				"url": "localhost:8080/merchant/location/77BD8E97FE581AD553D656BAF60BB7B199C275D1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get merchant by GId WILL FAIL",
+			"request": {
+				"url": "localhost:8080/merchant/location/EF7BE5A5EE23A51D339A43CDC1D62982EB61CC3FXXX",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get merchant by GId exclude all",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/merchant/location/77BD8E97FE581AD553D656BAF60BB7B199C275D1?omitMerchantInfo=true&omitConsumerFeatures=true&omitContactInfo=true",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location",
+						"77BD8E97FE581AD553D656BAF60BB7B199C275D1"
+					],
+					"query": [
+						{
+							"key": "omitMerchantInfo",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "omitConsumerFeatures",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "omitContactInfo",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "filter merchants geolocation Will Fail",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/merchant/location?longitude=-82.530947&latitude=27.254624&searchRadius=-1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"location"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "Olat",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitMerchantInfo",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitConsumerFeatures",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "omitContactInfo",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "longitude",
+							"value": "-82.530947",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "latitude",
+							"value": "27.254624",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "searchRadius",
+							"value": "-1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
