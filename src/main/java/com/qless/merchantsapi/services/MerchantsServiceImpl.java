@@ -3,14 +3,16 @@ package com.qless.merchantsapi.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qless.merchantsapi.model.Location;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.geo.*;
+import org.springframework.data.geo.Circle;
+import org.springframework.data.geo.Distance;
+import org.springframework.data.geo.Metrics;
+import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Stream;

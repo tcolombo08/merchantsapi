@@ -3,7 +3,6 @@ package com.qless.merchantsapi.controllers;
 import com.qless.merchantsapi.exceptions.EntityNotFoundException;
 import com.qless.merchantsapi.model.Location;
 import com.qless.merchantsapi.services.MerchantsService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -25,18 +24,21 @@ public class MerchantsController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Location>> findLocations(@RequestParam(required = false) String searchText,
-                                                                @RequestParam(required = false) Double longitude,
-                                                                @RequestParam(required = false) Double latitude,
-                                                                @RequestParam(required = false, defaultValue = "50000") @Positive  Integer searchRadius,
-                                                                @RequestParam(required = false) String[] gids,
-                                                                @RequestParam(required = false, defaultValue = "10") @Positive Integer maximumResults,
-                                                                @RequestParam(required = false) Boolean mobileClientAccess,
-                                                                @RequestParam(required = false, defaultValue = "false") Boolean omitMerchantInfo,
-                                                                @RequestParam(required = false, defaultValue = "false") Boolean omitContactInfo,
-                                                                @RequestParam(required = false, defaultValue = "false") Boolean omitConsumerFeatures) {
+                                                        @RequestParam(required = false) Double longitude,
+                                                        @RequestParam(required = false) Double latitude,
+                                                        @RequestParam(required = false, defaultValue = "50000") @Positive Integer searchRadius,
+                                                        @RequestParam(required = false) String[] gids,
+                                                        @RequestParam(required = false, defaultValue = "10") @Positive Integer maximumResults,
+                                                        @RequestParam(required = false) Boolean mobileClientAccess,
+                                                        @RequestParam(required = false, defaultValue = "false") Boolean omitMerchantInfo,
+                                                        @RequestParam(required = false, defaultValue = "false") Boolean omitContactInfo,
+                                                        @RequestParam(required = false, defaultValue = "false") Boolean omitConsumerFeatures) {
 
         List<Location> results = merchantsService.filterAll(searchText, longitude, latitude, searchRadius, gids, maximumResults,
                 mobileClientAccess, omitMerchantInfo, omitContactInfo, omitConsumerFeatures);
+        if (results == null || results.isEmpty()) {
+            throw new EntityNotFoundException("No entities found");
+        }
         return ResponseEntity.ok(results);
 
     }
@@ -51,7 +53,7 @@ public class MerchantsController {
         Location location = merchantsService.findByGID(mobileClientAccess, omitMerchantInfo, omitContactInfo, omitConsumerFeatures, location_gid);
 
         if (location == null) {
-            throw  new EntityNotFoundException("No entities found");
+            throw new EntityNotFoundException("No entities found");
         }
 
         return ResponseEntity.ok(location);

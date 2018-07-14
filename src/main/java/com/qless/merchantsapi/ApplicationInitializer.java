@@ -27,7 +27,7 @@ public class ApplicationInitializer implements ApplicationListener<ApplicationRe
     @Override
     public void onApplicationEvent(final ApplicationReadyEvent event) {
 
-        if(restoreDB) {
+        if (restoreDB) {
             merchantsService.restoreDatabase(fileName);
         }
 

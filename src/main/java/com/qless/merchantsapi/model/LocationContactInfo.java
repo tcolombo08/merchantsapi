@@ -5,7 +5,6 @@ import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 
 import static org.springframework.data.mongodb.core.index.GeoSpatialIndexType.GEO_2D;
-import static org.springframework.data.mongodb.core.index.GeoSpatialIndexType.GEO_2DSPHERE;
 
 public class LocationContactInfo {
 

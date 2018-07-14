@@ -21,7 +21,8 @@ public class MerchantControllerValidationHandler {
 
 
     /**
-     * Handles validation errors in entities.
+     * Handles validation errors in params.
+     *
      * @param ex thrown exception to handle
      * @return message to return
      */
@@ -38,6 +39,7 @@ public class MerchantControllerValidationHandler {
 
     /**
      * Handles error when now records found.
+     *
      * @param ex thrown exception to handle
      * @return message to return
      */
@@ -54,6 +56,7 @@ public class MerchantControllerValidationHandler {
 
     /**
      * Handles internal server errors.
+     *
      * @param ex thrown exception to handle
      * @return message to return
      */
