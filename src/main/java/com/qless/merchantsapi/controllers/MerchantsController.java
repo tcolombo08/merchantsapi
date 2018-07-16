@@ -24,10 +24,10 @@ public class MerchantsController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Location>> findLocations(@RequestParam(required = false) String searchText,
+                                                        @RequestParam(required = false) String[] gids,
                                                         @RequestParam(required = false) Double longitude,
                                                         @RequestParam(required = false) Double latitude,
                                                         @RequestParam(required = false, defaultValue = "50000") @Positive Integer searchRadius,
-                                                        @RequestParam(required = false) String[] gids,
                                                         @RequestParam(required = false, defaultValue = "10") @Positive Integer maximumResults,
                                                         @RequestParam(required = false) Boolean mobileClientAccess,
                                                         @RequestParam(required = false, defaultValue = "false") Boolean omitMerchantInfo,
@@ -44,16 +44,15 @@ public class MerchantsController {
     }
 
     @GetMapping(path = "/{location_gid}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Location> findLocationByGID(@RequestParam(required = false) Boolean mobileClientAccess,
+    public ResponseEntity<Location> findLocationByGID(@PathVariable String location_gid, @RequestParam(required = false) Boolean mobileClientAccess,
                                                       @RequestParam(required = false, defaultValue = "false") boolean omitMerchantInfo,
                                                       @RequestParam(required = false, defaultValue = "false") boolean omitContactInfo,
-                                                      @RequestParam(required = false, defaultValue = "false") boolean omitConsumerFeatures,
-                                                      @PathVariable String location_gid) {
+                                                      @RequestParam(required = false, defaultValue = "false") boolean omitConsumerFeatures) {
 
         Location location = merchantsService.findByGID(mobileClientAccess, omitMerchantInfo, omitContactInfo, omitConsumerFeatures, location_gid);
 
         if (location == null) {
-            throw new EntityNotFoundException("No entities found");
+            throw new EntityNotFoundException("No entity found");
         }
 
         return ResponseEntity.ok(location);
